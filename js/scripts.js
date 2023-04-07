@@ -8,17 +8,27 @@ function Pizza (toppings = [], crust = "", size = "", toppingPrices = {}) {
 }
 
 const toppings = {
-  "pepperoni": 0.75,
+  "pepperoni": 1.75,
+  "sausage": 2,
+  "canadian bacon": 1.50,
   "green peppers": 0.50,
-  "artichokes": 0.50
+  "artichokes": 0.50,
+  "mushrooms": 0.50
 };
 
 const crusts = {
-  "thin and crispy": 5
+  "thin and crispy": 5,
+  "original": 7,
+  "hand tossed": 8.25,
+  "deep dish": 10
 };
 
 const sizes = {
-  "medium": 9
+  "personal": 7,
+  "medium": 9,
+  "large": 10.50,
+  "xtra large": 12
+
 };
 
 Pizza.prototype.getPrice = function() {
@@ -41,5 +51,5 @@ Pizza.prototype.getPrice = function() {
   }
   
   return totalPrice;
-}
+};
 
