@@ -12,5 +12,5 @@ const yourPizza = new Pizza({
 });
 
 Pizza.prototype.getPrice = function(){
-  
+  let totalPrice = this.basePrice
 }

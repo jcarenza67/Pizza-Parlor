@@ -37,7 +37,9 @@ _A web application that simulates a real Pizza company where users can order a v
   Expected Output: Pizza {toppings: ["mushrooms", "artichokes", "green pepper", "sausage", "pepperoni"], sizes: ["personal", "medium", "large", "xtra large"], crusts: ["original", "thin and crispy", "hand tossed", "deep dish"]};
 
   Test: "It should get a price for the pizza using a prototype"
-  Code: if(totalPrice === 10)
+  Code: const completePizza = new Pizza (["pepperoni", "green peppers", "artichokes"], "thin and crispy", "medium");
+  completePizza.cost();
+  Expected Output:
   ```
 ## Known Bugs
 
