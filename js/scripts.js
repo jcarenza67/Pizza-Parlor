@@ -68,6 +68,16 @@ const pizzaSize = document.getElementById("size-summary");
 const pizzaTopping = document.getElementById("toppings-summary");
 const totalPrice = document.getElementById("price-summary");
 
-cartButton.addEventListener("click", function(){
+cartButton.addEventListener("click", function(event){
+  event.preventDefault();
 
+  const selectedCrust = crustSelect.value;
+  const selectedSize = sizeSelect.value;
+  const selectedToppings = toppingSelect.value;
+
+  const pizza = new Pizza(Array.from(selectedToppings, option => option.value), selectedCrust, selectedSize, toppings); 
+
+  pizzaCrust.textContent = "Crust: " + pizza.crust;
+  pizzaSize.textContent = "Size: " + pizza.size;
+  pizzaTopping.textContent = "Selected Toppings:";
 });
