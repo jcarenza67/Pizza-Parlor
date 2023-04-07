@@ -11,7 +11,7 @@
 
 ## Description
 
-_A web application that simulates a real Pizza company where users can order a variety of different toppings and sizes_
+_A web application that simulates a real Pizza company where users can order specialty pizzas with different crusts and different sizes_
 
 ## Links
 

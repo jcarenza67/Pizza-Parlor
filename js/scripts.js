@@ -1,4 +1,3 @@
-// Business Logic for Pizza Types
 function Pizza (specials = "", crust = "", size = "", toppingPrices = {}) {
   this.specials = specials;
   this.size = size;
@@ -53,7 +52,7 @@ Pizza.prototype.getPrice = function() {
 
 
 
-//UI logic
+
 window.addEventListener("load", function(){
   const crustSelect = document.getElementById("crust-select");
   const sizeSelect = document.getElementById("size-select");
@@ -64,6 +63,8 @@ window.addEventListener("load", function(){
   const pizzaSize = document.getElementById("size-summary");
   const pizzaTopping = document.getElementById("toppings-summary");
   const totalPrice = document.getElementById("price-summary");
+
+  let inCart = false;
 
   function addToCart(event){
     event.preventDefault();
@@ -82,7 +83,13 @@ window.addEventListener("load", function(){
     totalPrice.textContent = "Total: $" + pizza.getPrice().toFixed(2);
 
     summaryDiv.classList.remove("hidden");
+
+    if(inCart) {
+      cartButton.textContent = "Add to cart";
+    } else {
+      cartButton.textContent = "Update cart"
     }
+  }
     
   
   if(cartButton){
