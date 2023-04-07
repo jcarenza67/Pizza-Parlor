@@ -58,26 +58,39 @@ Pizza.prototype.getPrice = function() {
 
 
 //UI logic
-const crustSelect = document.getElementById("crust-select");
-const sizeSelect = document.getElementById("size-select");
-const toppingSelect = document.getElementById("topping-select");
-const cartButton = document.getElementById("add-to-cart");
-const summaryDiv = document.getElementById("summary");
-const pizzaCrust = document.getElementById("crust-summary");
-const pizzaSize = document.getElementById("size-summary");
-const pizzaTopping = document.getElementById("toppings-summary");
-const totalPrice = document.getElementById("price-summary");
+window.addEventListener("load", function(){
+  const crustSelect = document.getElementById("crust-select");
+  const sizeSelect = document.getElementById("size-select");
+  const toppingSelect = document.getElementById("topping-select");
+  const cartButton = document.getElementById("cart");
+  const summaryDiv = document.getElementById("summary");
+  const pizzaCrust = document.getElementById("crust-summary");
+  const pizzaSize = document.getElementById("size-summary");
+  const pizzaTopping = document.getElementById("toppings-summary");
+  const totalPrice = document.getElementById("price-summary");
 
-cartButton.addEventListener("click", function(event){
-  event.preventDefault();
+  cartButton.addEventListener("click", function(event){
+    event.preventDefault();
 
-  const selectedCrust = crustSelect.value;
-  const selectedSize = sizeSelect.value;
-  const selectedToppings = toppingSelect.value;
 
-  const pizza = new Pizza(Array.from(selectedToppings, option => option.value), selectedCrust, selectedSize, toppings); 
 
-  pizzaCrust.textContent = "Crust: " + pizza.crust;
-  pizzaSize.textContent = "Size: " + pizza.size;
-  pizzaTopping.textContent = "Selected Toppings:";
+    const selectedCrust = crustSelect.value;
+    const selectedSize = sizeSelect.value;
+    const selectedToppings = toppingSelect.value;
+
+    const pizza = new Pizza(Array.from(selectedToppings, option => option.value), selectedCrust, selectedSize, toppings); 
+
+    pizzaCrust.textContent = "Crust: " + pizza.crust;
+    pizzaSize.textContent = "Size: " + pizza.size;
+    pizzaTopping.textContent = "Selected Toppings:";
+    for (let i = 0; i < pizza.toppings.length; i++) {
+      const topping = pizza.toppings[i];
+      const toppingElement = document.createElement("p")
+      toppingElement.textContent = "- " + topping + ": $" + toppings[topping].toFixed(2);
+      pizzaTopping.appendChild(toppingElement);
+    }
+    totalPrice.textContent = "Total: $" + pizza.getPrice().toFixed(2);
+
+    summaryDiv.classList.remove("hidden");
+  });
 });
