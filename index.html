@@ -27,8 +27,8 @@
             <option value="deep dish">Deep Dish</option>
           </select>
           <br>
-          <label for="toppings-select">Toppings:</label>
-          <select id="toppings-select" name="toppings" multiple>
+          <label for="topping-select">Toppings:</label>
+          <select id="topping-select" name="toppings">
             <option value="pepperoni">Pepperoni</option>
             <option value="sausage">Sausage</option>
             <option value="canadian bacon">Canadian Bacon</option>
@@ -45,9 +45,16 @@
             <option value="xtra large">Xtra Large</option>
           </select>
           <br>
-          <button type="submit">Add to Cart</button>
+          <button id="add-to-cart" type="submit">Add to Cart</button>
         </form>
-        <div id="cart" class="hidden"></div>
+        <div id="summary" class="hidden">
+          <h3>Order Summary:</h3>
+          <p id="crust-summary">Crust:</p>
+          <p id="size-summary">Size:</p>
+          <p id="toppings-summary">Selected Toppings:</p>
+          <p id="price-summary">Total:</p>
+          <h3>Thank you for shopping!</h3>
+        </div>
       </div>
     </div>
   </div> 

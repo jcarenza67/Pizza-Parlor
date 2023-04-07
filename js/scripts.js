@@ -53,3 +53,21 @@ Pizza.prototype.getPrice = function() {
   return totalPrice;
 };
 
+
+
+
+
+//UI logic
+const crustSelect = document.getElementById("crust-select");
+const sizeSelect = document.getElementById("size-select");
+const toppingSelect = document.getElementById("topping-select");
+const cartButton = document.getElementById("add-to-cart");
+const summaryDiv = document.getElementById("summary");
+const pizzaCrust = document.getElementById("crust-summary");
+const pizzaSize = document.getElementById("size-summary");
+const pizzaTopping = document.getElementById("toppings-summary");
+const totalPrice = document.getElementById("price-summary");
+
+cartButton.addEventListener("click", function(){
+
+});
