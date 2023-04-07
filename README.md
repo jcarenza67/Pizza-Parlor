@@ -30,7 +30,11 @@ _A web application that simulates a real Pizza company where users can order a v
 
   Test: "It should return a Pizza object with  two properties for toppings and size"
   Code: const yourPizza = new Pizza (["mushrooms", "artichokes"], "xtra large"); 
-  Expected Output: Pizza {toppings: ["mushrooms", "artichokes"], size: "medium"}
+  Expected Output: Pizza {toppings: ["mushrooms", "artichokes"], size: "xtra large"}
+
+  Test: "It should return a Pizza object with one more property added for crusts with multiple options and also more size and topping options"
+  Code: 
+  Expected Output: Pizza
   ```
 ## Known Bugs
 
