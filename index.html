@@ -19,22 +19,22 @@
       <div class="col-md-6">
         <hr>
         <form id="pizza-form">
+          <label for="topping-select">Toppings:</label>
+          <select id="topping-select" name="toppings">
+            <option value="Pepperoni lovers">Pepperoni Lovers</option>
+            <option value="Margherita">Margherita</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Meat lovers">Meat lovers</option>
+            <option value="Hearty artichoke">Hearty artichoke</option>
+            <option value="Shroom pie">Shroom pie</option>
+          </select>
+          <br>
           <label for="crust-select">Crust:</label>
           <select id="crust-select" name="crust">
             <option value="thin and crispy">Thin and Crispy</option>
             <option value="original">Original</option>
             <option value="hand tossed">Hand Tossed</option>
             <option value="deep dish">Deep Dish</option>
-          </select>
-          <br>
-          <label for="topping-select">Toppings:</label>
-          <select id="topping-select" name="toppings" multiple>
-            <option value="pepperoni">Pepperoni</option>
-            <option value="sausage">Sausage</option>
-            <option value="canadian bacon">Canadian Bacon</option>
-            <option value="green peppers">Green Peppers</option>
-            <option value="artichokes">Artichokes</option>
-            <option value="mushrooms">Mushrooms</option>
           </select>
           <br>
           <label for="size-select">Size:</label>
@@ -51,7 +51,7 @@
           <h3>Order Summary:</h3>
           <p id="crust-summary">Crust:</p>
           <p id="size-summary">Size:</p>
-          <p id="toppings-summary">Selected Toppings:</p>
+          <p id="toppings-summary">Selected Specialty Pizza:</p>
           <p id="price-summary">Total:</p>
           <h3>Thank you for shopping!</h3>
         </div>

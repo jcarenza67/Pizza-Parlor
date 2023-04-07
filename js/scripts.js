@@ -41,13 +41,9 @@ Pizza.prototype.getPrice = function() {
   if (sizes.hasOwnProperty(this.size)) {
     totalPrice += sizes[this.size];
   }
-  
-  for (let i = 0; i < this.toppings.length; i++) {
-    const topping = this.toppings[i];
     
-    if (toppings.hasOwnProperty(topping)) {
-      totalPrice += toppings[topping];
-    }
+  if (specialtyToppings.hasOwnProperty(this.specials)) {
+    totalPrice += specialtyToppings[this.specials];
   }
   
   return totalPrice;
@@ -78,25 +74,19 @@ window.addEventListener("load", function(){
     const selectedSize = sizeSelect.value;
     const selectedTopping = toppingSelect.value;
 
-    const pizza = new Pizza(Array.from(selectedTopping, option => option.value), selectedCrust, selectedSize, toppings); 
+    const pizza = new Pizza(selectedTopping, selectedCrust, selectedSize, specialtyToppings); 
 
     pizzaCrust.textContent = "Crust: " + pizza.crust;
     pizzaSize.textContent = "Size: " + pizza.size;
-    pizzaTopping.textContent = "Selected Toppings:";
-    for (let i = 0; i < pizza.toppings.length; i++) {
-      const topping = pizza.toppings[i];
-      const toppingElement = document.createElement("p")
-      if(toppings[topping] != undefined){
-        toppingElement.textContent = "- " + topping + ": $" + toppings[topping].toFixed(2);
-        pizzaTopping.appendChild(toppingElement);
-      }
-    }
+    pizzaTopping.textContent = "Selected Specialty Pizza: " + pizza.specials;
     totalPrice.textContent = "Total: $" + pizza.getPrice().toFixed(2);
 
     summaryDiv.classList.remove("hidden");
-  }
-
+    }
+    
+  
   if(cartButton){
     cartButton.addEventListener("click", addToCart);
+  
   }
-  });
+});
