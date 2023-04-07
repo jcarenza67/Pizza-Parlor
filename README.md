@@ -38,8 +38,8 @@ _A web application that simulates a real Pizza company where users can order a v
 
   Test: "It should get a price for the pizza using a prototype"
   Code: const completePizza = new Pizza (["pepperoni", "green peppers", "artichokes"], "thin and crispy", "medium");
-  completePizza.cost();
-  Expected Output:
+  completePizza.getPrice();
+  Expected Output: 15.75
   ```
 ## Known Bugs
 
