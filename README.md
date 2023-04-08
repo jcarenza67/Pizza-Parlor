@@ -36,6 +36,8 @@ _A web application that simulates a real Pizza company where users can order spe
   Code: const yourPizza = new Pizza(["mushrooms", "artichokes", "green pepper", "sausage", "pepperoni"], ["personal", "medium", "large", "xtra large"], ["original", "thin and crispy", "hand tossed", "deep dish"]);
   Expected Output: Pizza {toppings: ["mushrooms", "artichokes", "green pepper", "sausage", "pepperoni"], sizes: ["personal", "medium", "large", "xtra large"], crusts: ["original", "thin and crispy", "hand tossed", "deep dish"]};
 
+  Describe: Pizza.prototype.getPrice()
+
   Test: "It should get a price for the pizza using a prototype"
   Code: const completePizza = new Pizza (["pepperoni", "green peppers", "artichokes"], "thin and crispy", "medium");
   completePizza.getPrice();
