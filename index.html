@@ -13,6 +13,30 @@
   <title>Welcome To!</title>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">HOME</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <div class="container">
     <h1>Doughlar Pizza</h1>
     <div class="row">
@@ -31,7 +55,7 @@
           </select>
           <br>
           <br>
-          <label for="crust-select">Crust:</label>
+          <label for="crust-select">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crust:</label>
           <select id="crust-select" name="crust">
             <option>-----Choose-----</option>
             <option value="thin and crispy">Thin and Crispy</option>
@@ -41,7 +65,7 @@
           </select>
           <br>
           <br>
-          <label for="size-select">Size:</label>
+          <label for="size-select">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Size:</label>
           <select id="size-select" name="size">
             <option>-----Choose-----</option>
             <option value="personal">Personal</option>
@@ -51,7 +75,9 @@
           </select>
           <br>
           <br>
-          <button id="cart" type="submit">Add to Cart</button>
+          <div class=>
+            <button id="cart" type="submit">Add to Cart</button>
+          </div>  
         </form>
         <div id="summary" class="hidden">
           <h3>Order Summary:</h3>

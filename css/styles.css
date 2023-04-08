@@ -25,6 +25,14 @@ h1 {
   color: tomato;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: tomato;
+  text-shadow: 2px 2px #000;
+}
+
+
 select {
   font-size: 1.2rem;
   padding: 10px;
@@ -35,14 +43,22 @@ select {
 }
 
 button[type="submit"] {
-  background-color: tomato;
-  color: white;
-  font-size: 1.2rem;
+  display: flex;
+  justify-content: right;
+  background-color: #fff;
+  color: tomato;
+  border: 2px solid tomato;
   padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-left: auto;
+  border-radius: 30px;
+  font-size: 16px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: tomato;
+  color: #fff;
 }
 
 #summary {
