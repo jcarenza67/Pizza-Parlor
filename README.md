@@ -13,6 +13,8 @@
 
 _A web application that simulates a real Pizza company where users can order specialty pizzas with different crusts and different sizes_
 
+***The navbar and checkout button are decoration only***
+
 ## Links
 
 [This is the link to the Github repository](https://github.com/jcarenza67/Pizza-Parlor) 
@@ -45,7 +47,7 @@ _A web application that simulates a real Pizza company where users can order spe
   ```
 ## Known Bugs
 
-* _Unknown_
+* _It lets you add the Choose option to the cart_
 
 # License
 
