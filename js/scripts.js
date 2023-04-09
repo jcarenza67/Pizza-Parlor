@@ -16,17 +16,17 @@ const specialtyToppings = {
 };
 
 const crusts = {
-  "thin and crispy": 5,
-  "original": 7,
-  "hand tossed": 8.25,
-  "deep dish": 10
+  "Thin and Crispy": 5,
+  "Original": 7,
+  "Hand Tossed": 8.25,
+  "Deep Dish": 10
 };
 
 const sizes = {
-  "personal": 7,
-  "medium": 9,
-  "large": 10.50,
-  "xtra large": 12
+  "Personal": 7,
+  "Medium": 9,
+  "Large": 10.50,
+  "Xtra Large": 12
 
 };
 
@@ -64,7 +64,7 @@ window.addEventListener("load", function(){
   const pizzaTopping = document.getElementById("toppings-summary");
   const totalPrice = document.getElementById("price-summary");
 
-  let inCart = false;
+  const inCart = false;
 
   function addToCart(event){
     event.preventDefault();
@@ -74,6 +74,7 @@ window.addEventListener("load", function(){
     const selectedCrust = crustSelect.value;
     const selectedSize = sizeSelect.value;
     const selectedTopping = toppingSelect.value;
+    
 
     const pizza = new Pizza(selectedTopping, selectedCrust, selectedSize, specialtyToppings); 
 
@@ -87,11 +88,10 @@ window.addEventListener("load", function(){
     if(inCart) {
       cartButton.textContent = "Add to cart";
     } else {
-      cartButton.textContent = "Update cart"
+      cartButton.textContent = "Update cart";
     }
   }
     
-  
   if(cartButton){
     cartButton.addEventListener("click", addToCart);
   

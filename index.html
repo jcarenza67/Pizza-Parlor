@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
-    rel="stylesheet" 
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
-    crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <script src="js/scripts.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome To!</title>
+  <title>Welcome!</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -45,7 +45,7 @@
         <form id="pizza-form">
           <label for="topping-select">Specialty Pizza:</label>
           <select id="topping-select" name="toppings">
-            <option>-----Choose-----</option>
+            <option class="default" selected disabled>-----Choose-----</option>
             <option value="Pepperoni lovers">Pepperoni Lovers</option>
             <option value="Margherita">Margherita</option>
             <option value="Vegetarian">Vegetarian</option>
@@ -57,21 +57,21 @@
           <br>
           <label for="crust-select">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crust:</label>
           <select id="crust-select" name="crust">
-            <option>-----Choose-----</option>
-            <option value="thin and crispy">Thin and Crispy</option>
-            <option value="original">Original</option>
-            <option value="hand tossed">Hand Tossed</option>
-            <option value="deep dish">Deep Dish</option>
+            <option class="default" selected disabled>-----Choose-----</option>
+            <option value="Thin and Crispy">Thin and Crispy</option>
+            <option value="Original">Original</option>
+            <option value="Hand Tossed">Hand Tossed</option>
+            <option value="Deep Dish">Deep Dish</option>
           </select>
           <br>
           <br>
           <label for="size-select">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Size:</label>
           <select id="size-select" name="size">
-            <option>-----Choose-----</option>
-            <option value="personal">Personal</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-            <option value="xtra large">Xtra Large</option>
+            <option class="default" selected disabled>-----Choose-----</option>
+            <option value="Personal">Personal</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="Xtra Large">Xtra Large</option>
           </select>
           <br>
           <br>
@@ -81,10 +81,11 @@
         </form>
         <div id="summary" class="hidden">
           <h3>Order Summary:</h3>
+          <p id="toppings-summary">Selected Specialty Pizza:</p>
           <p id="crust-summary">Crust:</p>
           <p id="size-summary">Size:</p>
-          <p id="toppings-summary">Selected Specialty Pizza:</p>
           <p id="price-summary">Total:</p>
+          <button>Checkout</button>
           <h3>Thank you for shopping!</h3>
         </div>
       </div>
