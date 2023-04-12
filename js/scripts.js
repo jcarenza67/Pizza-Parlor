@@ -34,7 +34,6 @@ Pizza.prototype.getPrice = function() {
 
 
 
-
 window.addEventListener("load", function(){
   const crustSelect = document.getElementById("crust-select");
   const sizeSelect = document.getElementById("size-select");
