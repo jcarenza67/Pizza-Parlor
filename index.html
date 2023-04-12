@@ -42,51 +42,65 @@
     <div class="row">
       <div class="col-md-6">
         <hr>
-        <form id="pizza-form">
-          <label for="topping-select">Specialty Pizza:</label>
-          <select id="topping-select" name="toppings">
-            <option class="default" selected disabled>-----Choose-----</option>
-            <option value="Pepperoni lovers">Pepperoni Lovers</option>
-            <option value="Margherita">Margherita</option>
-            <option value="Vegetarian">Vegetarian</option>
-            <option value="Meat lovers">Meat lovers</option>
-            <option value="Hearty artichoke">Hearty artichoke</option>
-            <option value="Shroom pie">Shroom pie</option>
-          </select>
-          <br>
-          <br>
-          <label for="crust-select">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crust:</label>
-          <select id="crust-select" name="crust">
-            <option class="default" selected disabled>-----Choose-----</option>
-            <option value="Thin and Crispy">Thin and Crispy</option>
-            <option value="Original">Original</option>
-            <option value="Hand Tossed">Hand Tossed</option>
-            <option value="Deep Dish">Deep Dish</option>
-          </select>
-          <br>
-          <br>
-          <label for="size-select">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Size:</label>
-          <select id="size-select" name="size">
-            <option class="default" selected disabled>-----Choose-----</option>
-            <option value="Personal">Personal</option>
-            <option value="Medium">Medium</option>
-            <option value="Large">Large</option>
-            <option value="Xtra Large">Xtra Large</option>
-          </select>
-          <br>
-          <br>
-          <div class=>
-            <button id="cart" type="submit">Add to Cart</button>
-          </div>  
+          <h3>Toppings:</h3>
+          <label>
+            <input type="checkbox" name="toppings[]" value="Pepperoni" class="topping-checkbox">
+            Pepperoni
+          </label><br>
+          <label>
+            <input type="checkbox" name="toppings[]" value="Mushrooms" class="topping-checkbox">
+            Mushrooms
+          </label><br>
+          <label>
+            <input type="checkbox" name="toppings[]" value="Onions" class="topping-checkbox">
+            Onions
+          </label><br>
+          <label>
+            <input type="checkbox" name="toppings[]" value="Olives" class="topping-checkbox">
+            Olives
+          </label><br>
+          <label>
+            <input type="checkbox" name="toppings[]" value="Peppers" class="topping-checkbox">
+            Peppers
+          </label><br>
+          <label>
+            <input type="checkbox" name="toppings[]" value="Anchovies" class="topping-checkbox">
+            Anchovies
+          </label><br>
         </form>
+        <br>
+        <br>
+        <label for="crust-select">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crust:</label>
+        <select id="crust-select" name="crust">
+          <option class="default" selected disabled>-----Choose-----</option>
+          <option value="Thin and Crispy">Thin and Crispy</option>
+          <option value="Original">Original</option>
+          <option value="Hand Tossed">Hand Tossed</option>
+          <option value="Deep Dish">Deep Dish</option>
+        </select>
+        <br>
+        <br>
+        <label for="size-select">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Size:</label>
+        <select id="size-select" name="size">
+          <option class="default" selected disabled>-----Choose-----</option>
+          <option value="Personal">Personal</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+          <option value="Xtra Large">Xtra Large</option>
+        </select>
+        <br>
+        <br>
+        <div class=>
+          <button id="cart" type="submit">Add to Cart</button>
+        </div>  
         <div id="summary" class="hidden">
-          <h3>Order Summary:</h3>
-          <p id="toppings-summary">Selected Specialty Pizza:</p>
-          <p id="crust-summary">Crust:</p>
-          <p id="size-summary">Size:</p>
-          <p id="price-summary">Total:</p>
-          <button>Checkout</button>
-          <h3>Thank you for shopping!</h3>
+            <h3>Order Summary:</h3>
+            <p id="toppings-summary">Toppings:</p>
+            <p id="crust-summary">Crust:</p>
+            <p id="size-summary">Size:</p>
+            <p id="price-summary">Total:</p>
+            <button>Checkout</button>
+            <h3>Thank you for shopping!</h3>
         </div>
       </div>
     </div>
