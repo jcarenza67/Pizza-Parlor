@@ -1,10 +1,10 @@
 function Pizza (toppings, crust, size, toppingPrices, crusts, sizes) {
-  this.toppings = toppings || [];
-  this.size = size || "";
-  this.crust = crust || "";
-  this.toppingPrices = toppingPrices || {};
-  this.crusts = crusts || {};
-  this.sizes = sizes || {};
+  this.toppings = toppings;
+  this.size = size;
+  this.crust = crust;
+  this.toppingPrices = toppingPrices;
+  this.crusts = crusts;
+  this.sizes = sizes;
 }
 
 Pizza.prototype.getPrice = function() {
