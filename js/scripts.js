@@ -74,15 +74,19 @@ window.addEventListener("load", function(){
   function addToCart(event){
     event.preventDefault();
 
+    const errorMessage = document.getElementById("error-message");
     const selectedCrust = crustSelect.value;
     const selectedSize = sizeSelect.value;
+    const selectedToppings = [];
     
-    if(selectedCrust === "" || selectedSize === "") {
-      alert("Please select a crust and size");
+    if(selectedCrust === "-----Choose-----" || selectedSize === "-----Choose-----"){
+      errorMessage.textContent = "!! Please select a crust and size !!";
+      errorMessage.style.display = "block";
       return;
     }
+  
+  
 
-    const selectedToppings = [];
 
     for (let i = 0; i < toppingCheckboxes.length; i++) {
       const checkbox = toppingCheckboxes[i];
@@ -104,11 +108,12 @@ window.addEventListener("load", function(){
       cartButton.textContent = "Add to cart";
     } else {
       cartButton.textContent = "Update cart";
+      const errorMessage = document.getElementById("error-message");
+      errorMessage.style.display = "none";
     }
   }
     
   if(cartButton){
     cartButton.addEventListener("click", addToCart);
-  
-  }
+    }
 });
