@@ -56,9 +56,13 @@ _A web application that simulates a real Pizza company where users can order spe
   Code: const pizza = new Pizza(["Onions"]);
   Expected Output: 0.75
 
-  Test: "It should increase the price by $.75 if the user selects Peppers"
+  Test: "It should increase the price by $.50 if the user selects Peppers"
   Code: const pizza = new Pizza(["Peppers"]);
   Expected Output: 0.50
+
+  Test: "It should increase the price by $2 if the user selects Anchovies"
+  Code: const pizza = new Pizza(["Anchovies"]);
+  Expected Output: 2.00
   ```
 
   
