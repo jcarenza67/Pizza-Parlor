@@ -40,14 +40,14 @@ _A web application that simulates a real Pizza company where users can order spe
 
   Describe: Pizza.prototype.getPrice()
 
-  Test: "It should get a price for the pizza using a prototype"
-  Code: const completePizza = new Pizza (["pepperoni", "green peppers", "artichokes"], "thin and crispy", "medium");
-  completePizza.getPrice();
-  Expected Output: 15.75
-
-  Test: "It should increase the price by $1.50 if the user selects pepperoni"
-  Code: const pizza = new Pizza (["pepperoni"])
+  Test: "It should increase the price by $1.50 if the user selects Pepperoni"
+  Code: const pizza = new Pizza(["Pepperoni"]);
   Expected Output: 1.50
+
+  Test: "It should increase the price by $1 if the user selects Mushroom"
+  Code: const pizza = new Pizza(["Mushroom"]);
+  Expected Output: 1.00
+
   ```
 
   
