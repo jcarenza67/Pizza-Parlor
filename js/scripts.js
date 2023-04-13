@@ -1,10 +1,11 @@
-function Pizza (toppings, crust, size, toppingPrices, crusts, sizes) {
+function Pizza (toppings, crust, size, toppingPrices, crusts, sizes, name) {
   this.toppings = toppings;
   this.size = size;
   this.crust = crust;
   this.toppingPrices = toppingPrices;
   this.crusts = crusts;
   this.sizes = sizes;
+  this.name = name;
 }
 
 Pizza.prototype.getPrice = function() {
@@ -28,6 +29,12 @@ Pizza.prototype.getPrice = function() {
   }
   
   return totalPrice;
+};
+
+Pizza.prototype.validateName = function() {
+  if(this.name.length < 4) {
+    return "invalid name";
+  }
 };
 
 
