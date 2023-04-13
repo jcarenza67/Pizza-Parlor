@@ -44,7 +44,13 @@ _A web application that simulates a real Pizza company where users can order spe
   Code: const completePizza = new Pizza (["pepperoni", "green peppers", "artichokes"], "thin and crispy", "medium");
   completePizza.getPrice();
   Expected Output: 15.75
+
+  Test: "It should increase the price by $1.50 if the user selects pepperoni"
+  Code: const pizza = new Pizza (["pepperoni"])
+  Expected Output: 1.50
   ```
+
+  
 ## Known Bugs
 
 * _It lets you add the Choose option to the cart_
