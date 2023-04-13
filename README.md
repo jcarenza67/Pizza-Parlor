@@ -95,6 +95,13 @@ _A web application that simulates a real Pizza company where users can order spe
   Test: "It should increase the price by $2 if the user selects Anchovies"
   Code: const pizza = new Pizza(["Anchovies"]);
   Expected Output: 2.00
+
+  Describe: Pizza.prototype.validateName()
+
+  Test: "It should return 'invalid name' if the user enters a name smaller than 4 characters"
+  Code: const user = new Pizza("Bob");
+  const updatedName = user.validateName();
+  Expected Output: invalid name
   ```
 
   
