@@ -33,7 +33,8 @@ Pizza.prototype.getPrice = function() {
 
 Pizza.prototype.validateName = function() {
   if(this.name.length < 4) {
-    return "invalid name";
+    this.name = "invalid name";
+    return;
   }
 };
 
@@ -81,6 +82,8 @@ window.addEventListener("load", function(){
   function addToCart(event){
     event.preventDefault();
 
+    const invalidName = document.getElementById("invalid");
+    const name = document.getElementById("name").value;
     const errorMessage = document.getElementById("error-message");
     const selectedCrust = crustSelect.value;
     const selectedSize = sizeSelect.value;
@@ -91,16 +94,27 @@ window.addEventListener("load", function(){
       errorMessage.style.display = "block";
       return;
     }
-  
-  
 
-
+    if(name.length < 4) {
+      errorMessage.textContent = "!! Please enter a valid name, with at least 4 characters !!";
+      errorMessage.style.display = "block";
+      return;
+    } 
+    let noToppingsChecked = true;
     for (let i = 0; i < toppingCheckboxes.length; i++) {
       const checkbox = toppingCheckboxes[i];
       if (checkbox.checked) {
         selectedToppings.push(checkbox.value);
+        noToppingsChecked = false;
       }
     }
+
+    if (noToppingsChecked) {
+      errorMessage.textContent = "!! Please select at least one topping !!";
+      errorMessage.style.display = "block";
+      return;
+    }
+  
   
     const pizza = new Pizza(selectedToppings, selectedCrust, selectedSize, toppingPrices, crusts, sizes); 
 
@@ -118,6 +132,7 @@ window.addEventListener("load", function(){
       const errorMessage = document.getElementById("error-message");
       errorMessage.style.display = "none";
     }
+    
   }
     
   if(cartButton){
