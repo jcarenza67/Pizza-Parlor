@@ -22,7 +22,7 @@ Pizza.prototype.getPrice = function() {
   if (this.toppings.length > 0) {
     for (let i = 0; i < this.toppings.length; i++) {
       const topping = this.toppings[i];
-      if (this.toppingPrices.hasOwnProperty(topping)) {
+      if (topping in this.toppingPrices) {
         totalPrice += this.toppingPrices[topping];
       }
     }
@@ -82,7 +82,6 @@ window.addEventListener("load", function(){
   function addToCart(event){
     event.preventDefault();
 
-    const invalidName = document.getElementById("invalid");
     const name = document.getElementById("name").value;
     const errorMessage = document.getElementById("error-message");
     const selectedCrust = crustSelect.value;
