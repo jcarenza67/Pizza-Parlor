@@ -17,8 +17,10 @@ Pizza.prototype.getPrice = function() {
   
   if (this.size in this.sizes) {
     totalPrice += this.sizes[this.size];
+  } else {
+    totalPrice += 100;
   }
-    
+
   if (this.toppings.length > 0) {
     for (let i = 0; i < this.toppings.length; i++) {
       const topping = this.toppings[i];
@@ -132,9 +134,9 @@ window.addEventListener("load", function(){
       errorMessage.style.display = "none";
     }
     
-  }
     
-  if(cartButton){
+  }
     cartButton.addEventListener("click", addToCart);
-    }
+    
+  
 });
