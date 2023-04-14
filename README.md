@@ -111,7 +111,7 @@ _A web application that simulates a real Pizza company where users can order spe
   
 ## Known Bugs
 
-* _It lets you add the Choose option to the cart_
+* _Unknown_
 
 # License
 
